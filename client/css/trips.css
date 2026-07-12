@@ -1,0 +1,98 @@
+.page-header{
+
+margin-bottom:30px;
+
+}
+
+.trip-form,
+.trip-table{
+
+background:white;
+
+padding:25px;
+
+border-radius:18px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+margin-bottom:30px;
+
+}
+
+.trip-form h2,
+.trip-table h2{
+
+margin-bottom:20px;
+
+}
+
+.trip-form form{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
+
+}
+
+.trip-form input,
+.trip-form select{
+
+padding:14px;
+
+border:1px solid #d1d5db;
+
+border-radius:10px;
+
+}
+
+.trip-form button{
+
+grid-column:span 2;
+
+background:#2563eb;
+
+color:white;
+
+border:none;
+
+padding:15px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.trip-form button:hover{
+
+background:#1d4ed8;
+
+}
+
+.completed{
+
+color:#16a34a;
+
+font-weight:bold;
+
+}
+
+.dispatch{
+
+color:#d97706;
+
+font-weight:bold;
+
+}
+
+.draft{
+
+color:#2563eb;
+
+font-weight:bold;
+
+}
