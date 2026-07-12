@@ -19,6 +19,8 @@
 
 <div class="dashboard-container">
 
+<!-- Sidebar -->
+
 <aside class="sidebar">
 
 <h2>🚛 TransitOps</h2>
@@ -26,16 +28,28 @@
 <ul>
 
 <li><a href="dashboard.html">🏠 Dashboard</a></li>
+
 <li><a href="vehicles.html">🚚 Vehicles</a></li>
+
 <li><a href="drivers.html">👨 Drivers</a></li>
+
 <li><a href="trips.html">🛣 Trips</a></li>
+
 <li><a href="maintenance.html">🔧 Maintenance</a></li>
+
 <li class="active"><a href="expenses.html">⛽ Fuel & Expenses</a></li>
+
 <li><a href="reports.html">📊 Reports</a></li>
+
+<li><a href="settings.html">⚙ Settings</a></li>
+
+<li><a href="login.html">🚪 Logout</a></li>
 
 </ul>
 
 </aside>
+
+<!-- Main -->
 
 <main class="main-content">
 
@@ -47,15 +61,17 @@
 
 </div>
 
+<!-- Expense Form -->
+
 <section class="expense-form">
 
 <h2>Add Fuel / Expense</h2>
 
-<form>
+<form id="expenseForm">
 
-<select>
+<select id="vehicle" required>
 
-<option>Select Vehicle</option>
+<option value="">Select Vehicle</option>
 
 <option>Van-05</option>
 
@@ -65,109 +81,88 @@
 
 </select>
 
-<input type="number" placeholder="Fuel (Litres)">
+<input
+type="number"
+id="fuel"
+placeholder="Fuel (Litres)"
+required>
 
-<input type="number" placeholder="Fuel Cost (₹)">
+<input
+type="number"
+id="fuelCost"
+placeholder="Fuel Cost (₹)"
+required>
 
-<input type="number" placeholder="Toll Expense (₹)">
+<input
+type="number"
+id="toll"
+placeholder="Toll Expense (₹)"
+value="0">
 
-<input type="number" placeholder="Maintenance Expense (₹)">
+<input
+type="number"
+id="maintenance"
+placeholder="Maintenance Expense (₹)"
+value="0">
 
-<input type="date">
+<input
+type="date"
+id="date"
+required>
 
-<button>Add Record</button>
+<button type="submit">
+
+➕ Add Record
+
+</button>
 
 </form>
 
 </section>
+<!-- ================= SUMMARY CARDS ================= -->
 
 <section class="summary-cards">
 
 <div class="summary-card">
-
-<h2>₹45,000</h2>
-
+<h2 id="fuelTotal">₹0</h2>
 <p>Total Fuel Cost</p>
-
 </div>
 
 <div class="summary-card">
-
-<h2>₹12,500</h2>
-
-<p>Total Toll</p>
-
+<h2 id="tollTotal">₹0</h2>
+<p>Total Toll Cost</p>
 </div>
 
 <div class="summary-card">
-
-<h2>₹18,000</h2>
-
+<h2 id="maintenanceTotal">₹0</h2>
 <p>Maintenance Cost</p>
-
 </div>
 
 <div class="summary-card">
-
-<h2>₹75,500</h2>
-
+<h2 id="overallTotal">₹0</h2>
 <p>Total Operational Cost</p>
-
 </div>
 
 </section>
+
+<!-- ================= EXPENSE HISTORY ================= -->
 
 <section class="expense-table">
 
 <h2>Expense History</h2>
 
-<table>
+<table id="expenseTable">
 
 <tr>
 
 <th>Date</th>
 <th>Vehicle</th>
-<th>Fuel(L)</th>
-<th>Fuel Cost</th>
-<th>Toll</th>
-<th>Maintenance</th>
-<th>Total</th>
-
-</tr>
-
-<tr>
-
-<td>15-07-2026</td>
-<td>Van-05</td>
-<td>35</td>
-<td>₹3500</td>
-<td>₹300</td>
-<td>₹0</td>
-<td>₹3800</td>
-
-</tr>
-
-<tr>
-
-<td>14-07-2026</td>
-<td>Truck-02</td>
-<td>70</td>
-<td>₹7200</td>
-<td>₹500</td>
-<td>₹2000</td>
-<td>₹9700</td>
-
-</tr>
-
-<tr>
-
-<td>13-07-2026</td>
-<td>Mini Truck-03</td>
-<td>28</td>
-<td>₹2800</td>
-<td>₹150</td>
-<td>₹500</td>
-<td>₹3450</td>
+<th>Fuel (L)</th>
+<th>Fuel Cost (₹)</th>
+<th>Toll (₹)</th>
+<th>Maintenance (₹)</th>
+<th>Total (₹)</th>
+<th>Action</th>
 
 </tr>
 
@@ -179,6 +174,10 @@
 
 </div>
 
-</body>
+<!-- JavaScript -->
 
+<script src="js/database.js"></script>
+<script src="js/expenses.js"></script>
+
+</body>
 </html>
