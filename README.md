@@ -197,9 +197,9 @@ Developed for Hackathon 2026.
 
 **Team Members**
 
-- Your Name
-- Team Member 2
-- Team Member 3
+- Ronniel Jeswaney
+- Yash Khanchandani
+- Yogesh Khatri
 
 ---
 
