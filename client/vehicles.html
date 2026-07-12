@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vehicle Registry - TransitOps</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+<aside class="sidebar">
+
+<h2>🚛 TransitOps</h2>
+
+<ul>
+<li><a href="dashboard.html">🏠 Dashboard</a></li>
+<li class="active"><a href="vehicles.html">🚚 Vehicles</a></li>
+<li><a href="drivers.html">👨 Drivers</a></li>
+<li><a href="trips.html">🛣 Trips</a></li>
+<li><a href="maintenance.html">🔧 Maintenance</a></li>
+<li><a href="expenses.html">⛽ Fuel & Expenses</a></li>
+<li><a href="reports.html">📊 Reports</a></li>
+</ul>
+
+</aside>
+
+<main class="main-content">
+
+<h1>Vehicle Registry</h1>
+
+<div class="form-card">
+
+<h2>Add Vehicle</h2>
+
+<form>
+
+<input type="text" placeholder="Registration Number">
+
+<input type="text" placeholder="Vehicle Name">
+
+<select>
+<option>Truck</option>
+<option>Van</option>
+<option>Mini Truck</option>
+</select>
+
+<input type="number" placeholder="Maximum Load Capacity (kg)">
+
+<input type="number" placeholder="Odometer">
+
+<input type="number" placeholder="Acquisition Cost">
+
+<button>Add Vehicle</button>
+
+</form>
+
+</div>
+
+<div class="table-section">
+
+<h2>Registered Vehicles</h2>
+
+<table>
+
+<tr>
+<th>Registration</th>
+<th>Vehicle</th>
+<th>Type</th>
+<th>Capacity</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>MH12AB1234</td>
+<td>Van-05</td>
+<td>Van</td>
+<td>500 kg</td>
+<td class="success">Available</td>
+</tr>
+
+<tr>
+<td>MH14XY5678</td>
+<td>Truck-02</td>
+<td>Truck</td>
+<td>1200 kg</td>
+<td class="warning">On Trip</td>
+</tr>
+
+<tr>
+<td>MH04PQ9876</td>
+<td>Mini Van</td>
+<td>Mini Truck</td>
+<td>700 kg</td>
+<td class="danger">In Shop</td>
+</tr>
+
+</table>
+
+</div>
+
+</main>
+
+</div>
+
+</body>
+</html>
