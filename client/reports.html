@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reports & Analytics | TransitOps</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/reports.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+<aside class="sidebar">
+
+<h2>🚛 TransitOps</h2>
+
+<ul>
+
+<li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+<li><a href="vehicles.html">🚚 Vehicles</a></li>
+
+<li><a href="drivers.html">👨 Drivers</a></li>
+
+<li><a href="trips.html">🛣 Trips</a></li>
+
+<li><a href="maintenance.html">🔧 Maintenance</a></li>
+
+<li><a href="expenses.html">⛽ Fuel & Expenses</a></li>
+
+<li class="active"><a href="reports.html">📊 Reports</a></li>
+
+</ul>
+
+</aside>
+
+<main class="main-content">
+
+<div class="page-header">
+
+<h1>Reports & Analytics</h1>
+
+<p>Fleet performance and operational insights.</p>
+
+</div>
+
+<div class="report-cards">
+
+<div class="report-card">
+
+<h2>96%</h2>
+
+<p>Fleet Utilization</p>
+
+</div>
+
+<div class="report-card">
+
+<h2>14.8 km/L</h2>
+
+<p>Fuel Efficiency</p>
+
+</div>
+
+<div class="report-card">
+
+<h2>₹75,500</h2>
+
+<p>Operational Cost</p>
+
+</div>
+
+<div class="report-card">
+
+<h2>18%</h2>
+
+<p>Vehicle ROI</p>
+
+</div>
+
+</div>
+
+<div class="chart-container">
+
+<h2>Monthly Fuel Consumption</h2>
+
+<canvas id="fuelChart"></canvas>
+
+</div>
+
+<div class="chart-container">
+
+<h2>Fleet Status</h2>
+
+<canvas id="fleetChart"></canvas>
+
+</div>
+
+<div class="export-buttons">
+
+<button>Export CSV</button>
+
+<button>Export PDF</button>
+
+</div>
+
+</main>
+
+</div>
+
+<script src="js/reports.js"></script>
+
+</body>
+
+</html>
