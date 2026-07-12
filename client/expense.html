@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fuel & Expense Management | TransitOps</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/expenses.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+<aside class="sidebar">
+
+<h2>🚛 TransitOps</h2>
+
+<ul>
+
+<li><a href="dashboard.html">🏠 Dashboard</a></li>
+<li><a href="vehicles.html">🚚 Vehicles</a></li>
+<li><a href="drivers.html">👨 Drivers</a></li>
+<li><a href="trips.html">🛣 Trips</a></li>
+<li><a href="maintenance.html">🔧 Maintenance</a></li>
+<li class="active"><a href="expenses.html">⛽ Fuel & Expenses</a></li>
+<li><a href="reports.html">📊 Reports</a></li>
+
+</ul>
+
+</aside>
+
+<main class="main-content">
+
+<div class="page-header">
+
+<h1>Fuel & Expense Management</h1>
+
+<p>Track fuel usage and operational expenses.</p>
+
+</div>
+
+<section class="expense-form">
+
+<h2>Add Fuel / Expense</h2>
+
+<form>
+
+<select>
+
+<option>Select Vehicle</option>
+
+<option>Van-05</option>
+
+<option>Truck-02</option>
+
+<option>Mini Truck-03</option>
+
+</select>
+
+<input type="number" placeholder="Fuel (Litres)">
+
+<input type="number" placeholder="Fuel Cost (₹)">
+
+<input type="number" placeholder="Toll Expense (₹)">
+
+<input type="number" placeholder="Maintenance Expense (₹)">
+
+<input type="date">
+
+<button>Add Record</button>
+
+</form>
+
+</section>
+
+<section class="summary-cards">
+
+<div class="summary-card">
+
+<h2>₹45,000</h2>
+
+<p>Total Fuel Cost</p>
+
+</div>
+
+<div class="summary-card">
+
+<h2>₹12,500</h2>
+
+<p>Total Toll</p>
+
+</div>
+
+<div class="summary-card">
+
+<h2>₹18,000</h2>
+
+<p>Maintenance Cost</p>
+
+</div>
+
+<div class="summary-card">
+
+<h2>₹75,500</h2>
+
+<p>Total Operational Cost</p>
+
+</div>
+
+</section>
+
+<section class="expense-table">
+
+<h2>Expense History</h2>
+
+<table>
+
+<tr>
+
+<th>Date</th>
+<th>Vehicle</th>
+<th>Fuel(L)</th>
+<th>Fuel Cost</th>
+<th>Toll</th>
+<th>Maintenance</th>
+<th>Total</th>
+
+</tr>
+
+<tr>
+
+<td>15-07-2026</td>
+<td>Van-05</td>
+<td>35</td>
+<td>₹3500</td>
+<td>₹300</td>
+<td>₹0</td>
+<td>₹3800</td>
+
+</tr>
+
+<tr>
+
+<td>14-07-2026</td>
+<td>Truck-02</td>
+<td>70</td>
+<td>₹7200</td>
+<td>₹500</td>
+<td>₹2000</td>
+<td>₹9700</td>
+
+</tr>
+
+<tr>
+
+<td>13-07-2026</td>
+<td>Mini Truck-03</td>
+<td>28</td>
+<td>₹2800</td>
+<td>₹150</td>
+<td>₹500</td>
+<td>₹3450</td>
+
+</tr>
+
+</table>
+
+</section>
+
+</main>
+
+</div>
+
+</body>
+
+</html>
