@@ -1,0 +1,582 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f7fb;
+    color:#1e293b;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#2563eb;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin:0 20px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#1e293b;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#2563eb;
+}
+
+.login-btn{
+    text-decoration:none;
+    background:#2563eb;
+    color:white;
+    padding:12px 25px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    background:#1d4ed8;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 8%;
+    min-height:90vh;
+}
+
+.hero-left{
+    width:50%;
+}
+
+.hero-left h1{
+    font-size:58px;
+    line-height:1.2;
+    color:#0f172a;
+}
+
+.hero-left p{
+    margin:30px 0;
+    font-size:20px;
+    color:#475569;
+    line-height:1.8;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.primary-btn{
+    background:#2563eb;
+    color:white;
+    padding:15px 35px;
+    border-radius:12px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.primary-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+.secondary-btn{
+    border:2px solid #2563eb;
+    color:#2563eb;
+    padding:15px 35px;
+    border-radius:12px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.secondary-btn:hover{
+    background:#2563eb;
+    color:white;
+}
+
+.hero-right{
+    width:45%;
+}
+
+.hero-right img{
+    width:100%;
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    padding:70px 8%;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    text-align:center;
+    padding:40px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h2{
+    font-size:45px;
+    color:#2563eb;
+}
+
+.card p{
+    margin-top:10px;
+    color:#64748b;
+}
+
+/* ===========================
+   FEATURES
+=========================== */
+
+.features{
+    padding:100px 8%;
+}
+
+.features h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:60px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+.feature-card{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+}
+
+.feature-card h3{
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.feature-card p{
+    color:#475569;
+    line-height:1.8;
+}
+
+/* ===========================
+   WORKFLOW
+=========================== */
+
+.workflow{
+    background:#0f172a;
+    color:white;
+    padding:100px 8%;
+    text-align:center;
+}
+
+.workflow h2{
+    margin-bottom:60px;
+    font-size:40px;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:20px;
+}
+
+.step{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.step:hover{
+    background:#2563eb;
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+
+.about{
+    padding:100px 12%;
+    text-align:center;
+}
+
+.about h2{
+    font-size:42px;
+    margin-bottom:30px;
+}
+
+.about p{
+    font-size:19px;
+    line-height:1.8;
+    color:#475569;
+}
+
+/* ===========================
+   CTA
+=========================== */
+
+.cta{
+    text-align:center;
+    padding:100px 8%;
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:white;
+}
+
+.cta h2{
+    font-size:46px;
+}
+
+.cta p{
+    margin:30px 0;
+    font-size:20px;
+}
+
+.cta .primary-btn{
+    background:white;
+    color:#2563eb;
+    font-weight:600;
+}
+
+.cta .primary-btn:hover{
+    background:#f1f5f9;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+footer h2{
+    margin-bottom:15px;
+}
+
+footer p{
+    margin:10px 0;
+    color:#cbd5e1;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-left,
+.hero-right{
+    width:100%;
+}
+
+.hero-right{
+    margin-top:50px;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.stats{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.feature-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.steps{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:700px){
+
+.navbar{
+    flex-direction:column;
+}
+
+.nav-links{
+    flex-direction:column;
+    margin:20px 0;
+    text-align:center;
+}
+
+.nav-links li{
+    margin:10px 0;
+}
+
+.hero-left h1{
+    font-size:38px;
+}
+
+.stats{
+    grid-template-columns:1fr;
+}
+
+.feature-grid{
+    grid-template-columns:1fr;
+}
+
+.steps{
+    grid-template-columns:1fr;
+}
+
+.cta h2{
+    font-size:34px;
+}
+
+}
+
+
+/* Dashboard Preview */
+
+.dashboard-preview{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.dashboard-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.dashboard-header h3{
+    color:#0f172a;
+}
+
+.status{
+    color:#22c55e;
+    font-weight:600;
+}
+
+.dashboard-cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.mini-card{
+    background:#eff6ff;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+}
+
+.mini-card h4{
+    font-size:30px;
+    color:#2563eb;
+}
+
+.mini-card p{
+    margin-top:10px;
+    color:#475569;
+}
+
+
+
+
+/* ================= LOGIN ================= */
+
+.login-page{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+background:linear-gradient(135deg,#2563eb,#1d4ed8);
+
+}
+
+.login-container{
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.login-card{
+
+background:white;
+
+padding:45px;
+
+width:420px;
+
+border-radius:20px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+}
+
+.login-card h1{
+
+text-align:center;
+
+color:#2563eb;
+
+margin-bottom:10px;
+
+}
+
+.login-card p{
+
+text-align:center;
+
+margin-bottom:30px;
+
+color:#64748b;
+
+}
+
+.login-card label{
+
+display:block;
+
+margin-top:18px;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+}
+
+.login-card input,
+
+.login-card select{
+
+width:100%;
+
+padding:14px;
+
+border-radius:10px;
+
+border:1px solid #d1d5db;
+
+font-size:16px;
+
+}
+
+.login-card button{
+
+width:100%;
+
+margin-top:30px;
+
+padding:15px;
+
+border:none;
+
+border-radius:10px;
+
+background:#2563eb;
+
+color:white;
+
+font-size:17px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.login-card button:hover{
+
+background:#1d4ed8;
+
+}
+
+.login-card a{
+
+display:block;
+
+text-align:center;
+
+margin-top:25px;
+
+text-decoration:none;
+
+color:#2563eb;
+
+font-weight:600;
+
+}
