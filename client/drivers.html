@@ -1,0 +1,135 @@
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/drivers.css">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Management | TransitOps</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/drivers.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+
+        <h2>🚛 TransitOps</h2>
+
+        <ul>
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+            <li><a href="vehicles.html">🚚 Vehicles</a></li>
+            <li class="active"><a href="drivers.html">👨 Drivers</a></li>
+            <li><a href="trips.html">🛣 Trips</a></li>
+            <li><a href="maintenance.html">🔧 Maintenance</a></li>
+            <li><a href="expenses.html">⛽ Fuel & Expenses</a></li>
+            <li><a href="reports.html">📊 Reports</a></li>
+        </ul>
+
+    </aside>
+
+    <main class="main-content">
+
+        <div class="page-header">
+            <h1>Driver Management</h1>
+            <p>Manage driver profiles and monitor license validity.</p>
+        </div>
+
+        <section class="driver-form">
+
+            <h2>Add Driver</h2>
+
+            <form>
+
+                <input type="text" placeholder="Driver Name">
+
+                <input type="text" placeholder="License Number">
+
+                <select>
+                    <option>LMV</option>
+                    <option>HMV</option>
+                    <option>Transport</option>
+                </select>
+
+                <input type="date">
+
+                <input type="tel" placeholder="Contact Number">
+
+                <input type="number" placeholder="Safety Score">
+
+                <select>
+                    <option>Available</option>
+                    <option>On Trip</option>
+                    <option>Off Duty</option>
+                    <option>Suspended</option>
+                </select>
+
+                <button>Add Driver</button>
+
+            </form>
+
+        </section>
+
+        <section class="driver-table">
+
+            <h2>Registered Drivers</h2>
+
+            <table>
+
+                <tr>
+                    <th>Name</th>
+                    <th>License</th>
+                    <th>Category</th>
+                    <th>Expiry</th>
+                    <th>Phone</th>
+                    <th>Safety</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>Alex</td>
+                    <td>DL12345</td>
+                    <td>LMV</td>
+                    <td>15-08-2028</td>
+                    <td>9876543210</td>
+                    <td>95</td>
+                    <td class="available">Available</td>
+                </tr>
+
+                <tr>
+                    <td>John</td>
+                    <td>DL98765</td>
+                    <td>HMV</td>
+                    <td>12-01-2027</td>
+                    <td>9988776655</td>
+                    <td>90</td>
+                    <td class="trip">On Trip</td>
+                </tr>
+
+                <tr>
+                    <td>David</td>
+                    <td>DL78542</td>
+                    <td>Transport</td>
+                    <td>30-11-2026</td>
+                    <td>9123456780</td>
+                    <td>82</td>
+                    <td class="suspended">Suspended</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>

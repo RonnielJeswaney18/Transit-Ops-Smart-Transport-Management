@@ -1,0 +1,67 @@
+.page-header{
+    margin-bottom:30px;
+}
+
+.page-header h1{
+    color:#0f172a;
+}
+
+.page-header p{
+    color:#64748b;
+}
+
+.driver-form,
+.driver-table{
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    margin-bottom:30px;
+}
+
+.driver-form h2,
+.driver-table h2{
+    margin-bottom:20px;
+}
+
+.driver-form form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.driver-form input,
+.driver-form select{
+    padding:14px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+}
+
+.driver-form button{
+    grid-column:span 2;
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.driver-form button:hover{
+    background:#1d4ed8;
+}
+
+.available{
+    color:#16a34a;
+    font-weight:bold;
+}
+
+.trip{
+    color:#d97706;
+    font-weight:bold;
+}
+
+.suspended{
+    color:#dc2626;
+    font-weight:bold;
+}
