@@ -1,183 +1,126 @@
-// Load saved vehicles or start with an empty array
 let editIndex = -1;
 let vehicles = JSON.parse(localStorage.getItem("vehicles")) || [];
 
-// Form and table
 const form = document.getElementById("vehicleForm");
 const table = document.getElementById("vehicleTable");
 
-// Display vehicles when page loads
 displayVehicles();
 
-// Add Vehicle
 form.addEventListener("submit", function (e) {
 
     e.preventDefault();
 
     const vehicle = {
-
         registration: document.getElementById("registration").value,
-
         name: document.getElementById("vehicleName").value,
-
         type: document.getElementById("vehicleType").value,
-
         capacity: document.getElementById("capacity").value,
-
         odometer: document.getElementById("odometer").value,
-
         cost: document.getElementById("cost").value
-
     };
 
-    if(editIndex==-1){
-const duplicate = vehicles.find(v =>
-v.registration === vehicle.registration
-);
+    if (editIndex == -1) {
 
-if(duplicate && editIndex==-1){
+        const duplicate = vehicles.find(v => v.registration === vehicle.registration);
 
-alert("Vehicle already exists");
+        if (duplicate) {
+            alert("Vehicle already exists");
+            return;
+        }
 
-return;
+        vehicles.push(vehicle);
 
-}
-vehicles.push(vehicle);
+    } else {
 
-}else{
+        vehicles[editIndex] = vehicle;
+        editIndex = -1;
 
-vehicles[editIndex]=vehicle;
-
-editIndex=-1;
-
-}
+    }
 
     saveVehicles();
-
     form.reset();
-
     displayVehicles();
 
 });
 
-// Save to Local Storage
 function saveVehicles() {
-
     localStorage.setItem("vehicles", JSON.stringify(vehicles));
-
 }
 
-// Display Table
 function displayVehicles() {
 
-    // Keep heading row
     table.innerHTML = `
+    <tr>
+        <th>Registration</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Capacity</th>
+        <th>Action</th>
+    </tr>
+    `;
 
-<tr>
-<th>Registration</th>
-<th>Name</th>
-<th>Type</th>
-<th>Capacity</th>
-<th>Action</th>
-</tr>
-
-`;
-
-    vehicles.forEach((vehicle,index)=>{
+    vehicles.forEach((vehicle, index) => {
 
         table.innerHTML += `
-
-<tr>
-
-<td>${vehicle.registration}</td>
-
-<td>${vehicle.name}</td>
-
-<td>${vehicle.type}</td>
-
-<td>${vehicle.capacity}</td>
-
-<td>
-
-<button onclick="deleteVehicle(${index})">
-<td>
-
-<button
-class="action-btn edit-btn"
-onclick="editVehicle(${index})">
-
-Edit
-
-</button>
-
-<button
-class="action-btn delete-btn"
-onclick="deleteVehicle(${index})">
-
-Delete
-
-</button>
-
-</td>
-Delete
-
-</button>
-
-</td>
-
-</tr>
-
-`;
+        <tr>
+            <td>${vehicle.registration}</td>
+            <td>${vehicle.name}</td>
+            <td>${vehicle.type}</td>
+            <td>${vehicle.capacity}</td>
+            <td>
+                <button class="action-btn edit-btn" onclick="editVehicle(${index})">Edit</button>
+                <button class="action-btn delete-btn" onclick="deleteVehicle(${index})">Delete</button>
+            </td>
+        </tr>
+        `;
 
     });
 
 }
 
-// Delete
-function deleteVehicle(index){
+function deleteVehicle(index) {
 
-    vehicles.splice(index,1);
-
+    vehicles.splice(index, 1);
     saveVehicles();
-
     displayVehicles();
-function editVehicle(index){
-
-const vehicle=vehicles[index];
-
-document.getElementById("registration").value=vehicle.registration;
-
-document.getElementById("vehicleName").value=vehicle.name;
-
-document.getElementById("vehicleType").value=vehicle.type;
-
-document.getElementById("capacity").value=vehicle.capacity;
-
-document.getElementById("odometer").value=vehicle.odometer;
-
-document.getElementById("cost").value=vehicle.cost;
-
-editIndex=index;
 
 }
-document.getElementById("searchVehicle")
-.addEventListener("keyup",function(){
 
-const search=this.value.toLowerCase();
+function editVehicle(index) {
 
-const rows=document.querySelectorAll("#vehicleTable tr");
+    const vehicle = vehicles[index];
 
-rows.forEach((row,index)=>{
+    document.getElementById("registration").value = vehicle.registration;
+    document.getElementById("vehicleName").value = vehicle.name;
+    document.getElementById("vehicleType").value = vehicle.type;
+    document.getElementById("capacity").value = vehicle.capacity;
+    document.getElementById("odometer").value = vehicle.odometer;
+    document.getElementById("cost").value = vehicle.cost;
 
-if(index==0) return;
+    editIndex = index;
 
-const text=row.innerText.toLowerCase();
-
-row.style.display=text.includes(search)
-?"":"none";
-
-});
-
-});
 }
 
+const search = document.getElementById("searchVehicle");
+
+if (search) {
+
+    search.addEventListener("keyup", function () {
+
+        const value = this.value.toLowerCase();
+
+        const rows = document.querySelectorAll("#vehicleTable tr");
+
+        rows.forEach((row, index) => {
+
+            if (index === 0) return;
+
+            row.style.display = row.innerText.toLowerCase().includes(value)
+                ? ""
+                : "none";
+
+        });
+
+    });
+
+}

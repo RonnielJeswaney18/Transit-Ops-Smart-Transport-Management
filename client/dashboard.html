@@ -1,49 +1,392 @@
-<aside class="sidebar">
+<!DOCTYPE html>
+<html lang="en">
 
-    <h2>🚛 TransitOps</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransitOps Dashboard</title>
 
-    <ul>
+    <link rel="stylesheet" href="css/style.css">
 
-        <li class="active">
-            <a href="dashboard.html">🏠 Dashboard</a>
-        </li>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
 
-        <li>
-            <a href="vehicles.html">🚚 Vehicles</a>
-        </li>
+<body>
 
-        <li>
-            <a href="drivers.html">👨 Drivers</a>
-        </li>
+<div class="dashboard-container">
 
-        <li>
-            <a href="trips.html">🛣 Trips</a>
-        </li>
+    <!-- Sidebar -->
 
-        <li>
-            <a href="maintenance.html">🔧 Maintenance</a>
-        </li>
+    <aside class="sidebar">
 
-        <li>
-            <a href="expenses.html">⛽ Fuel & Expenses</a>
-        </li>
+        <div class="logo">
+            🚛 <span>TransitOps</span>
+        </div>
 
-        <li>
-            <a href="reports.html">📊 Reports</a>
-        </li>
+        <ul>
 
-        <li>
-            <a href="settings.html">⚙ Settings</a>
-        </li>
+            <li class="active">
+                <a href="dashboard.html">🏠 Dashboard</a>
+            </li>
 
-        <li>
-            <a href="index.html">🌐 Home Website</a>
-        </li>
+            <li>
+                <a href="vehicles.html">🚚 Vehicles</a>
+            </li>
 
-        <li>
-            <a href="login.html">🚪 Logout</a>
-        </li>
+            <li>
+                <a href="drivers.html">👨 Drivers</a>
+            </li>
 
-    </ul>
+            <li>
+                <a href="trips.html">🛣 Trips</a>
+            </li>
 
-</aside>
+            <li>
+                <a href="maintenance.html">🔧 Maintenance</a>
+            </li>
+
+            <li>
+                <a href="expenses.html">⛽ Fuel & Expenses</a>
+            </li>
+
+            <li>
+                <a href="reports.html">📊 Reports</a>
+            </li>
+
+            <li>
+                <a href="settings.html">⚙ Settings</a>
+            </li>
+
+            <li>
+                <a href="index.html">🌐 Website</a>
+            </li>
+
+            <li>
+                <a href="login.html">🚪 Logout</a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main-content">
+
+        <!-- Topbar -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Dashboard</h1>
+
+                <p>Welcome to TransitOps Fleet Management System 👋</p>
+
+            </div>
+
+            <div class="top-right">
+
+                <input type="text" placeholder="Search...">
+
+                <span>🔔</span>
+
+                <span>👤 Admin</span>
+
+            </div>
+
+        </header>
+
+        <!-- Cards -->
+
+        <section class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <h2 id="vehicleCount">125</h2>
+
+                <p>Total Vehicles</p>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h2 id="driverCount">48</h2>
+
+                <p>Drivers</p>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h2 id="tripCount">19</h2>
+
+                <p>Active Trips</p>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h2>₹82,450</h2>
+
+                <p>Fuel Expenses</p>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h2>7</h2>
+
+                <p>Maintenance</p>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h2>92%</h2>
+
+                <p>Fleet Utilization</p>
+
+            </div>
+
+        </section>
+
+        <!-- Fleet Status -->
+
+        <section class="dashboard-row">
+
+            <div class="panel">
+
+                <h2>Fleet Status</h2>
+
+                <table>
+
+                    <tr>
+                        <th>Vehicle</th>
+                        <th>Status</th>
+                    </tr>
+
+                    <tr>
+                        <td>MH12AB1234</td>
+                        <td><span class="available">🟢 Available</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>MH14XY4567</td>
+                        <td><span class="trip">🔵 On Trip</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>MH20MN1111</td>
+                        <td><span class="maintenance">🔴 Maintenance</span></td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <div class="panel">
+
+                <h2>Recent Activities</h2>
+
+                <ul class="activity-list">
+
+                    <li>✅ Driver Rahul registered</li>
+
+                    <li>✅ Vehicle MH12AB1234 added</li>
+
+                    <li>✅ Trip #204 dispatched</li>
+
+                    <li>✅ Fuel expense recorded</li>
+
+                    <li>✅ Maintenance scheduled</li>
+
+                </ul>
+
+            </div>
+
+        </section>
+                <!-- Bottom Section -->
+
+        <section class="dashboard-row">
+
+            <div class="panel">
+
+                <h2>Quick Actions</h2>
+
+                <div class="quick-actions">
+
+                    <a href="vehicles.html" class="action-btn">
+                        🚚<br>
+                        Register Vehicle
+                    </a>
+
+                    <a href="drivers.html" class="action-btn">
+                        👨<br>
+                        Register Driver
+                    </a>
+
+                    <a href="trips.html" class="action-btn">
+                        🛣<br>
+                        Create Trip
+                    </a>
+
+                    <a href="expenses.html" class="action-btn">
+                        ⛽<br>
+                        Add Expense
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="panel">
+
+                <h2>Today's Trips</h2>
+
+                <table>
+
+                    <tr>
+                        <th>Trip ID</th>
+                        <th>Driver</th>
+                        <th>Status</th>
+                    </tr>
+
+                    <tr>
+                        <td>#201</td>
+                        <td>Rahul</td>
+                        <td>🟢 Completed</td>
+                    </tr>
+
+                    <tr>
+                        <td>#202</td>
+                        <td>Amit</td>
+                        <td>🔵 Running</td>
+                    </tr>
+
+                    <tr>
+                        <td>#203</td>
+                        <td>Vikram</td>
+                        <td>🟡 Pending</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- Analytics -->
+
+        <section class="dashboard-row">
+
+            <div class="panel">
+
+                <h2>Trip Analytics</h2>
+
+                <div class="progress-box">
+
+                    <p>Completed Trips</p>
+
+                    <div class="progress">
+                        <div class="progress-fill" style="width:75%;">
+                            75%
+                        </div>
+                    </div>
+
+                    <p>Running Trips</p>
+
+                    <div class="progress">
+                        <div class="progress-fill blue" style="width:20%;">
+                            20%
+                        </div>
+                    </div>
+
+                    <p>Cancelled Trips</p>
+
+                    <div class="progress">
+                        <div class="progress-fill red" style="width:5%;">
+                            5%
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="panel">
+
+                <h2>Vehicle Distribution</h2>
+
+                <table>
+
+                    <tr>
+
+                        <th>Vehicle Type</th>
+
+                        <th>Total</th>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Truck</td>
+
+                        <td>65</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Mini Truck</td>
+
+                        <td>34</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Van</td>
+
+                        <td>18</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Bus</td>
+
+                        <td>8</td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer class="dashboard-footer">
+
+            <p>
+
+                © 2026 TransitOps |
+                Smart Transport Operations Platform |
+                Team TransitOps
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/database.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
