@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -23,19 +24,31 @@
 
 <p>Smart Transport Operations Platform</p>
 
-<form>
+<form id="loginForm">
 
 <label>Email</label>
 
-<input type="email" placeholder="Enter Email">
+<input
+type="email"
+id="email"
+placeholder="Enter Email"
+required
+oninvalid="this.setCustomValidity('Please enter a valid email ID.')"
+oninput="this.setCustomValidity('')">
 
 <label>Password</label>
 
-<input type="password" placeholder="Enter Password">
+<input
+type="password"
+id="password"
+placeholder="Enter Password"
+required>
 
 <label>Select Role</label>
 
-<select>
+<select id="role" required>
+
+<option value="">Select Role</option>
 
 <option>Fleet Manager</option>
 
@@ -47,7 +60,7 @@
 
 </select>
 
-<button type="submit">
+<button type="submit" id="loginBtn">
 
 Login
 
@@ -55,7 +68,9 @@ Login
 
 </form>
 
-<a href="dashboard.html">
+<a href="dashboard.html"
+id="continueBtn"
+class="disabled-link">
 
 Continue to Dashboard →
 
@@ -64,6 +79,8 @@ Continue to Dashboard →
 </div>
 
 </div>
+
+<script src="js/login.js"></script>
 
 </body>
 
