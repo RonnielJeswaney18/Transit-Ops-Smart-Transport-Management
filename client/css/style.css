@@ -918,3 +918,107 @@ table{
     transform:translateY(-3px);
 
 }
+
+
+/* ---------- Quick Actions ---------- */
+
+.quick-actions{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:15px;
+}
+
+.quick-actions .action-btn{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    background:#2563eb;
+
+    color:#fff !important;
+
+    text-decoration:none !important;
+
+    padding:15px 20px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    font-size:16px;
+
+    transition:0.3s;
+
+}
+
+.quick-actions .action-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateX(5px);
+
+}
+
+.quick-actions .icon{
+
+    font-size:24px;
+    width:35px;
+    text-align:center;
+
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar li{
+    margin:8px 0;
+}
+
+.sidebar a{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.sidebar a:hover{
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.sidebar .active a{
+
+    background:#2563eb;
+
+}
+
+
+.dashboard-search{
+
+    width:260px;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+    outline:none;
+
+}
