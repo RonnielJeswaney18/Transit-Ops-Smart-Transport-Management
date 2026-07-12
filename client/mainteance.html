@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maintenance Management | TransitOps</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/maintenance.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+<aside class="sidebar">
+
+<h2>🚛 TransitOps</h2>
+
+<ul>
+
+<li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+<li><a href="vehicles.html">🚚 Vehicles</a></li>
+
+<li><a href="drivers.html">👨 Drivers</a></li>
+
+<li><a href="trips.html">🛣 Trips</a></li>
+
+<li class="active"><a href="maintenance.html">🔧 Maintenance</a></li>
+
+<li><a href="expenses.html">⛽ Fuel & Expenses</a></li>
+
+<li><a href="reports.html">📊 Reports</a></li>
+
+</ul>
+
+</aside>
+
+<main class="main-content">
+
+<div class="page-header">
+
+<h1>Maintenance Management</h1>
+
+<p>Track vehicle servicing and maintenance schedules.</p>
+
+</div>
+
+<section class="maintenance-form">
+
+<h2>Create Maintenance Record</h2>
+
+<form>
+
+<input type="text" placeholder="Maintenance ID">
+
+<select>
+
+<option>Select Vehicle</option>
+
+<option>Van-05</option>
+
+<option>Truck-02</option>
+
+<option>Mini Truck-03</option>
+
+</select>
+
+<input type="text" placeholder="Maintenance Type">
+
+<input type="date">
+
+<select>
+
+<option>In Progress</option>
+
+<option>Completed</option>
+
+</select>
+
+<button>Create Record</button>
+
+</form>
+
+</section>
+
+<section class="maintenance-table">
+
+<h2>Maintenance Records</h2>
+
+<table>
+
+<tr>
+
+<th>ID</th>
+
+<th>Vehicle</th>
+
+<th>Maintenance</th>
+
+<th>Date</th>
+
+<th>Status</th>
+
+</tr>
+
+<tr>
+
+<td>MT001</td>
+
+<td>Van-05</td>
+
+<td>Oil Change</td>
+
+<td>15-07-2026</td>
+
+<td class="progress">In Progress</td>
+
+</tr>
+
+<tr>
+
+<td>MT002</td>
+
+<td>Truck-02</td>
+
+<td>Brake Service</td>
+
+<td>12-07-2026</td>
+
+<td class="complete">Completed</td>
+
+</tr>
+
+<tr>
+
+<td>MT003</td>
+
+<td>Mini Truck-03</td>
+
+<td>Engine Check</td>
+
+<td>10-07-2026</td>
+
+<td class="progress">In Progress</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section class="alert-box">
+
+<h2>Maintenance Rules</h2>
+
+<ul>
+
+<li>🚫 Vehicles under maintenance are marked <strong>In Shop</strong>.</li>
+
+<li>🚫 Vehicles in shop cannot be assigned to trips.</li>
+
+<li>✅ Completed maintenance restores vehicle availability.</li>
+
+</ul>
+
+</section>
+
+</main>
+
+</div>
+
+</body>
+
+</html>
