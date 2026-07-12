@@ -37,13 +37,16 @@
 
 <h2>Add Vehicle</h2>
 
-<form>
-
-<input type="text" placeholder="Registration Number">
+<form id="vehicleForm">
+<input
+id="registration"
+type="text"
+placeholder="Registration Number"
+required>
 
 <input type="text" placeholder="Vehicle Name">
+<select id="vehicleType">
 
-<select>
 <option>Truck</option>
 <option>Van</option>
 <option>Mini Truck</option>
@@ -65,7 +68,16 @@
 
 <h2>Registered Vehicles</h2>
 
-<table>
+<div class="search-box">
+
+<input
+type="text"
+id="searchVehicle"
+placeholder="Search by Registration or Vehicle Name">
+
+</div>
+
+<table id="vehicleTable">
 
 <tr>
 <th>Registration</th>
@@ -106,6 +118,6 @@
 </main>
 
 </div>
-
+<script src="js/vehicles.js"></script>
 </body>
 </html>

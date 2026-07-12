@@ -1,0 +1,39 @@
+.search-box{
+
+margin:20px 0;
+
+}
+
+.search-box input{
+
+width:100%;
+padding:14px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:16px;
+
+}
+
+.action-btn{
+
+padding:8px 15px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+margin:2px;
+
+}
+
+.edit-btn{
+
+background:#2563eb;
+color:white;
+
+}
+
+.delete-btn{
+
+background:#ef4444;
+color:white;
+
+}
